@@ -7,3 +7,4 @@ uploads/
 models/*.task
 reactapp/node_modules/
 reactapp/dist/
+script.md
