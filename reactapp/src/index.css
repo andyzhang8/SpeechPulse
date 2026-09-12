@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: 14 15 17;
+  --surface: 22 23 26;
+  --raised: 31 33 37;
+  --line: 42 44 49;
+  --fg: 236 236 238;
+  --muted: 160 162 169;
+  --faint: 110 113 121;
+  --voice: 138 180 248;
+  --body: 240 180 120;
+  --good: 127 209 174;
+  --attention: 242 139 130;
+  --live: 239 83 80;
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-canvas font-sans text-fg antialiased;
+  }
+
+  ::selection {
+    background: rgb(var(--voice) / 0.3);
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-medium uppercase tracking-[0.14em] text-faint;
+  }
+}
